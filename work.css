@@ -1,0 +1,369 @@
+@import url('https://fonts.cdnfonts.com/css/sf-ui-display');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'SF UI Display', sans-serif;
+}
+
+
+:root {
+    --blue-color:#001eff;
+    --blackblue-color:#191d42;
+    --yellow-color: #fff000;
+    --white-color: rgb(245, 247, 255);
+    --fade-out:rgb(85, 85, 85);
+    --font-1:'SF UI Display', sans-serif;
+}
+
+body {
+    background: var(--white-color);
+}
+
+
+
+
+/* WHATSAPP FIXED ICON */
+.chat {
+    position:fixed;
+     top:93%;
+     display:flex;
+     justify-content:right;
+     align-items:right;
+    right:20px;
+    z-index: 99999;
+    
+    }
+    
+    .chat-text{
+    background-color:white;
+    width:110px;
+    text-align:center;
+    border-radius:8px;
+    line-height:1.7;
+    font-weight:500;
+     height:27px;
+     display:none;
+  
+    }
+    
+    .whatsapp-img{
+    border-radius:10%;
+    height:60px;
+     width:60px;
+    margin-top: -20px;
+    animation: scaleUp 3s ease-in-out infinite;
+    }
+  
+  
+    @keyframes scaleUp {
+  
+        0%,
+        100% { transform: translateY(0) scale(1); }
+        
+        50% { transform: translateY(-5px) scale(1.05);}
+        
+        }
+  
+
+header.heading {
+    background: var(--white-color);
+    color: var(--white-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 30px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+
+}
+
+.logo-card img {
+    height: 50px;
+}
+
+.menu-btns {
+    font-size: 50px;
+    cursor: pointer;
+    color: var(--blue-color);
+}
+
+.slide-out {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #f8fcff; /* blueish white */
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.slide-out img {
+    width: 100px;
+    margin-bottom: 20px;
+}
+
+.nav-link-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav-link-card span {
+    color: #a1a1a1;
+    font-weight: 300;
+}
+
+.nav-link {
+    margin: 10px 0;
+}
+
+.nav-link a {
+    text-decoration: none;
+    color: var(--blue-color);
+    font-size: 18px;
+    font-weight: 300;
+    font-family: var(--font-1);
+}
+
+.hide {
+    display: none;
+}
+
+.close-btn {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    font-size: 50px;
+    cursor: pointer;
+    color: var(--blue-color);
+}
+
+
+#work {
+    margin-top: 200px;
+}
+
+
+.picbox {
+    position: relative;
+    width: fit-content;
+    margin: 20px;
+}
+
+.picimage {
+    position: relative;
+    overflow: hidden;
+}
+
+.picimage img {
+    display: block;
+    width: 100%;
+    transition: transform 0.3s ease;
+}
+
+.pictext {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+    transition: transform 0.3s ease;
+}
+
+.pictext h4 {
+    color: var(--blue-color);
+    margin-bottom: 5px;
+}
+
+.pictext p {
+    color: var(--blackblue-color);
+    font-size: 12px;
+
+}
+
+.res p {
+    padding-left: 20px;
+    position: relative;
+    bottom: 30px;
+}
+
+
+.picimage:hover img,
+.picimage:hover .pictext {
+    transform: translateY(-10px);
+}
+
+/* Styles for "Send me a message" section */
+#contact {
+    background: var(--white-color);
+    padding: 50px 30px;
+    text-align: center;
+}
+
+.contact-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background: var(--white-color);
+    border-radius: 10px;
+    text-align: left;
+}
+
+.contact-container h3 {
+    color: var(--blue-color);
+    margin-bottom: 20px;
+    font-size: 40px;
+    padding-right: 50px;
+}
+
+.contact-container p {
+    color: var(--blackblue-color);
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+    padding-right: 50px;
+}
+
+.contact-container input, .contact-container textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.308);
+    border-radius: 1px;
+    font-size: 10px;
+}
+
+.contact-container textarea {
+    resize: vertical;
+    height: 100px;
+}
+
+.contact-container button {
+    border: 2px solid var(--blue-color);
+    color: var(--blue-color);
+    background: transparent;
+    padding: 10px 50px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: color 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-container button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: var(--blue-color);
+    transition: left 0.3s;
+    z-index: -1;
+}
+
+/* .contact-container button:hover::before {
+    left: 0;
+    background: var(--blue-color);
+} */
+
+.contact-container button:hover {
+    color: var(--white-color);
+    background: var(--blue-color);
+}
+
+
+
+/* Styles for footer */
+footer {
+    background: var(--blue-color);
+    color: var(--yellow-color);
+    text-align: left;
+    padding: 20px 50px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    letter-spacing: 1px;
+    font-weight: 300;
+}
+
+footer h5 {
+    margin-bottom: 5px;
+    font-weight: 300;
+}
+.hello {
+    margin-bottom: 100px;
+    margin-top: 50px;
+}
+
+.helloo {
+    margin-bottom: 20px;
+    color: #a9a9a9;
+}
+
+.access h5 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.access hr {
+    border: none;
+    border-top: 1px solid var(--yellow-color);
+    width: 100%;
+    margin: 50px auto;
+    position: relative;
+
+}
+
+.copyright {
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    margin-top: 20px;
+}
+
+.copyright h5 {
+    margin-left: 5px;
+}
+
+footer a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/*---------------for soonhtml-----------*/
+
+.res h2 {
+    font-size: 40px;
+    padding-left: 30px;
+    color: var(--blue-color);
+    opacity: 0;
+    transform: translateX(-50px);
+    animation: slideIn 2s ease-out forwards;
+}
+
+@keyframes slideIn {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.res span {
+    color: var(--blackblue-color);
+}

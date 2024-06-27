@@ -1,0 +1,485 @@
+@import url('https://fonts.cdnfonts.com/css/sf-ui-display');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'SF UI Display', sans-serif;
+}
+
+
+:root {
+    --blue-color:#001eff;
+    --blackblue-color:#191d42;
+    --yellow-color: #fff000;
+    --white-color: rgb(245, 247, 255);
+    --fade-out:rgb(85, 85, 85);
+    --font-1:'SF UI Display', sans-serif;
+}
+
+body {
+    background: var(--blue-color);
+}
+
+
+
+/*------------Whatsapp----------*/
+
+
+
+
+/* WHATSAPP FIXED ICON */
+.chat {
+    position:fixed;
+     top:93%;
+     display:flex;
+     justify-content:right;
+     align-items:right;
+    right:20px;
+    z-index: 99999;
+    
+    }
+    
+    .chat-text{
+    background-color:white;
+    width:110px;
+    text-align:center;
+    border-radius:8px;
+    line-height:1.7;
+    font-weight:500;
+     height:27px;
+     display:none;
+  
+    }
+    
+    .whatsapp-img{
+    border-radius:10%;
+    height:60px;
+     width:60px;
+    margin-top: -20px;
+    animation: scaleUp 3s ease-in-out infinite;
+    }
+  
+  
+    @keyframes scaleUp {
+  
+        0%,
+        100% { transform: translateY(0) scale(1); }
+        
+        50% { transform: translateY(-5px) scale(1.05);}
+        
+        }
+  
+
+header.heading {
+    background: var(--blue-color);
+    color: var(--white-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 30px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+
+}
+
+.logo-card img {
+    height: 50px;
+}
+
+.menu-btns {
+    font-size: 50px;
+    cursor: pointer;
+    color: var(--yellow-color);
+}
+
+.slide-out {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #f8fcff; /* blueish white */
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.slide-out img {
+    width: 100px;
+    margin-bottom: 20px;
+}
+
+.nav-link-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav-link-card span {
+    color: #a1a1a1;
+    font-weight: 300;
+}
+
+.nav-link {
+    margin: 10px 0;
+}
+
+.nav-link a {
+    text-decoration: none;
+    color: var(--blue-color);
+    font-size: 18px;
+    font-weight: 300;
+    font-family: var(--font-1);
+}
+
+.hide {
+    display: none;
+}
+
+.close-btn {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    font-size: 50px;
+    cursor: pointer;
+    color: var(--blue-color);
+}
+
+  /*----------Bdy text--------------*/
+
+
+  #bdy {
+    padding-left: 40px;
+    margin-top: 150px;
+  }
+
+  .bdytext h2 {
+    color: var(--yellow-color);
+    margin-bottom: 30px;
+    font-size: 60px;
+    padding-right: 20px;
+    transform: translateX(-50px);
+    animation: slideIn 2s ease-out forwards;
+  }
+
+  @keyframes slideIn {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+  .bdytext span {
+    color: var(--white-color);
+  }
+
+  .bdytext p {
+    color: var(--white-color);
+    font-weight: 300;
+    font-size: 18px;
+    padding-right: 40px;
+    letter-spacing: 1px;
+  }
+
+  .bdytext p span {
+    color: var(--yellow-color);
+  }
+
+  .skill {
+    display: flex;
+    padding-right: 40px;
+    margin-top: 70px;
+    color: #f2f2fdf3;
+    font-weight: 300;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  .skill p {
+    font-size: 15px;
+    letter-spacing: 2px;
+  }
+
+
+  #me {
+    background: var(--yellow-color);
+    display: flex;
+    overflow: hidden;
+    height: 400px;
+    margin-top: 30px;
+    
+  }
+
+  .pic img {
+    width: 90%;
+    padding-top: 60px;
+    padding-left: 60px;
+  }
+
+
+  /*-------------WID-----------*/
+
+
+
+  #wid {
+    background: var(--white-color);
+    height: 690px;
+    overflow: hidden;
+  }
+
+  .widinfo {
+    position: relative;
+    top: 100px;
+    padding-left: 50px;
+    padding-right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+  }
+
+  .widinfo h3 {
+    font-size: 40px;
+    font-weight: bolder;
+    color: var(--blue-color);
+    margin-bottom: 20px;
+  }
+
+  .widinfo p {
+    color: var(--blackblue-color);
+    font-size: 15px;
+    padding-right: 30px;
+    line-height: 25px;
+    letter-spacing: 1px;
+  }
+
+  #ody {
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-top: 70px;
+    overflow: hidden;
+  }
+
+  .odytext h3 {
+    color: var(--yellow-color);
+    font-size: 40px;
+    margin-bottom: 20px;
+  }
+  
+  .odytext p {
+    color: var(--white-color);
+    letter-spacing: 1px;
+    font-size: 15px;
+    font-weight: 300;
+  }
+
+  .odyimg img {
+    width: 100%;
+    margin-top: 50px;
+  }
+
+
+  #ido {
+    background: var(--white-color);
+    padding: 50px 0;
+}
+
+.idtext {
+    background: #ffff;
+    padding-top: 20px;
+
+    /* border-radius: 10px; */
+    width: 350px;
+    height: 300px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.idtext2 {
+    padding-left: 50px;
+    padding-top: 20px;
+}
+
+.idtext h3 {
+    color: var(--blue-color);
+    font-size: 30px;
+    padding-right: 150px;
+    margin-bottom: 20px;
+}
+
+.idtext p {
+    color: var(--blackblue-colorblackblue-color);
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+    padding-right: 50px;
+    font-size: 15px;
+}
+
+.idtext button {
+    border: 2px solid var(--blue-color);
+    color: var(--blue-color);
+    background: transparent;
+    padding: 10px 50px;
+    font-size: 10px;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+}
+
+.idtext button:hover {
+    background: var(--blue-color);
+    color: var(--white-color);
+}
+
+.idtext hr {
+    position: relative;
+    top: 50px;
+    background: var(--blue-color);
+}
+
+
+/* Styles for "Send me a message" section */
+#contact {
+    background: var(--white-color);
+    padding: 50px 30px;
+    text-align: center;
+}
+
+.contact-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background: var(--white-color);
+    border-radius: 10px;
+    text-align: left;
+}
+
+.contact-container h3 {
+    color: var(--blue-color);
+    margin-bottom: 20px;
+    font-size: 40px;
+    padding-right: 50px;
+}
+
+.contact-container p {
+    color: var(--blackblue-color);
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+    padding-right: 50px;
+}
+
+.contact-container input, .contact-container textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.308);
+    border-radius: 1px;
+    font-size: 10px;
+}
+
+.contact-container textarea {
+    resize: vertical;
+    height: 100px;
+}
+
+.contact-container button {
+    border: 2px solid var(--blue-color);
+    color: var(--blue-color);
+    background: transparent;
+    padding: 10px 50px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: color 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-container button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: var(--blue-color);
+    transition: left 0.3s;
+    z-index: -1;
+}
+
+/* .contact-container button:hover::before {
+    left: 0;
+    background: var(--blue-color);
+} */
+
+.contact-container button:hover {
+    color: var(--white-color);
+    background: var(--blue-color);
+}
+
+
+
+/* Styles for footer */
+footer {
+    background: var(--blue-color);
+    color: var(--yellow-color);
+    text-align: left;
+    padding: 20px 50px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    letter-spacing: 1px;
+    font-weight: 300;
+}
+
+footer h5 {
+    margin-bottom: 5px;
+    font-weight: 300;
+}
+.hello {
+    margin-bottom: 100px;
+    margin-top: 50px;
+}
+
+.helloo {
+    margin-bottom: 20px;
+    color: #a9a9a9;
+}
+
+.access h5 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.access hr {
+    border: none;
+    border-top: 1px solid var(--yellow-color);
+    width: 100%;
+    margin: 50px auto;
+    position: relative;
+
+}
+
+.copyright {
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    margin-top: 20px;
+}
+
+.copyright h5 {
+    margin-left: 5px;
+}
+
+footer a {
+    text-decoration: none;
+    color: inherit;
+}
